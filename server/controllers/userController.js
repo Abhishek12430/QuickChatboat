@@ -1,4 +1,6 @@
 import User from "../models/user.js"
+import Chat from '../models/chat.js';
+
 import jwt from 'jsonwebtoken'
 import bcrypt from "bcryptjs";
 //Generate JWT

@@ -12,12 +12,16 @@ import { stripeWebhooks } from './controllers/webhooksController.js';
  const app = express();
    await connectDB()
 
+  app.use(cors());
+  app.use(express.json());
+
+
    //Stripe Webhooks
    app.post('/api/stripe',express.raw({type:'application/json'}),
    stripeWebhooks)
-  app.use(cors());
+  
 
-  app.use(express.json());
+
 
   app.get('/',(req,res)=> res.send('server is live'));
   app.use('/api/user',userRouter)

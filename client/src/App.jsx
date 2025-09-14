@@ -10,16 +10,17 @@ import './assets/prism.css'
 import Loading from "./pages/Loading";
 import { useAppContext } from "./context/AppContext";
 import Login from "./pages/Login";
-
+import {Toaster} from 'react-hot-toast'
 function App() {
-  const {user} = useAppContext();    
+  const {user,loadingUser} = useAppContext();    
   const [isMenuOpen, setMenuOpen] = useState(false);
   const {pathname} = useLocation()
 
-  if(pathname==='/loading') return  <Loading />
+  if(pathname==='/loading'||loadingUser ) return  <Loading />
 
   return (
     <>
+     <Toaster />
       {/* Menu icon (only visible when sidebar is closed) */}
       {!isMenuOpen && (
         <img
