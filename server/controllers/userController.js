@@ -1,5 +1,5 @@
 import User from "../models/user.js"
-import Chat from '../models/chat.js';
+import Chat from '../models/Chat.js';
 
 import jwt from 'jsonwebtoken'
 import bcrypt from "bcryptjs";

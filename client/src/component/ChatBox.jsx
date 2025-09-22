@@ -113,10 +113,10 @@ const ChatBox = () => {
         <select
           value={mode}
           onChange={(e) => setMode(e.target.value)}
-          className="text-sm pl-3 pr-2 outline-none bg-transparent dark:text-white text-black"
+          className="text-sm pl-3 pr-2 outline-none bg-transparent dark:text-white text-white"
         >
-          <option value="text">Text</option>
-          <option value="image">Image</option>
+          <option value="text" className="text-black">Text</option>
+          <option value="image" className="text-black">Image</option>
         </select>
 
         <input
@@ -124,7 +124,7 @@ const ChatBox = () => {
           value={prompt}
           type="text"
           placeholder="Type your prompt here..."
-          className="flex-1 w-full text-sm outline-none bg-transparent dark:text-white text-black"
+          className="flex-1 w-full text-sm outline-none bg-transparent dark:text-white text-white"
           required
         />
 
